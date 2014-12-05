@@ -6,7 +6,7 @@ class GalleriesController < ApplicationController
   def index
     #@galleries = Gallery.all
     #images = Image.all
-     @image = Image.find(1)
+     @image = Image.find(2)
   end
 
   # GET /galleries/1
