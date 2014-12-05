@@ -6,3 +6,12 @@ development:
     password: 
     host: localhost
     port: 5432
+	
+production:
+    adapter: postgresql
+    encoding: unicode
+    database: winseDecor_production
+    username: slyman
+    password: 
+    host: localhost
+    port: 5432
