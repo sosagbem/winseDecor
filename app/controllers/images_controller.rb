@@ -14,7 +14,11 @@ class ImagesController < ApplicationController
 
   # GET /images/new
   def new
-    @image = Image.new
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
+    puts 'Sly1'
+    puts @s3_direct_post.url
+    puts 'Sly2'
+    @image = Image.new    
   end
 
   # GET /images/1/edit
@@ -25,7 +29,7 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
-
+    puts @image.url
     respond_to do |format|
       if @image.save
         format.html { redirect_to @image, notice: 'Image was successfully created.' }

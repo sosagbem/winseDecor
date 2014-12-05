@@ -5,6 +5,7 @@ class GalleriesController < ApplicationController
   # GET /galleries.json
   def index
     @galleries = Gallery.all
+    @images = Image.all
   end
 
   # GET /galleries/1

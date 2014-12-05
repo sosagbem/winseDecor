@@ -6,6 +6,7 @@ class CreateImages < ActiveRecord::Migration
       t.integer :width
       t.integer :height
       t.string :url
+      t.integer :gallery_id
 
       t.timestamps
     end
