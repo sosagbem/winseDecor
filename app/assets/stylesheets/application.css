@@ -49,6 +49,10 @@
 	font-size:0.5em;
 }
 
+.pages {
+	margin-top: 60px;
+}
+
 @media (max-width:768px) {
     .brand img{
         margin-bottom: 5px
