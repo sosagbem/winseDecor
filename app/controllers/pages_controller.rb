@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   # GET /pages.json
   def index
     @pages = Page.all
-    @image = Image.find(2)
+    @image = Image.first()
     puts "Sly is about to Print image"
     puts @image
     puts "Sly has Printed image"
