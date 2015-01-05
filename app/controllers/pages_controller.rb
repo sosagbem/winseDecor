@@ -9,7 +9,27 @@ class PagesController < ApplicationController
     puts "Sly has Printed image"
   end
   
+  # GET /pages
+  # GET /pages.json
   def gallery
+    @images = Image.all
+  end
+  
+  # GET /pages
+  # GET /pages.json
+  def about
+    @images = Image.all
+  end
+  
+  # GET /pages
+  # GET /pages.json
+  def contact
+    @images = Image.all
+  end
+  
+  # GET /pages
+  # GET /pages.json
+  def services
     @images = Image.all
   end
 end

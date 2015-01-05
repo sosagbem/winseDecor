@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require_tree .
 //= require z.jquery.fileupload
+//= require owl.carousel

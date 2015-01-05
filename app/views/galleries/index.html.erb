@@ -1,10 +1,18 @@
-<%- model_class = Gallery -%>
-<!--<div class="page-header">
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>-->
-<h1 class="text-center">Coming Soon</h1>
-<div class="container text-center">
-	<%= image_tag @image.url %>
-</div>
+<h2>Our Gallery</h2>
 
-	  
+<% @images.in_groups_of(4, false).each do |group|%>
+<div class='row'>
+	<% group.each do |image|%> 
+	<div class='col-md-3'> 
+		<%= link_to image_tag("#{image.url}", height:"150", width:"200"), image_path(image) %>
+	<p>
+		<%= image.name %>
+	</p>
+	<p>
+		<%= link_to 'Show', image %>
+		<%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
+	</div>
+	<% end %>
+</div>
+<% end %>

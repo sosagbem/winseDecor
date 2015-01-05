@@ -9,7 +9,9 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+
+ *= require owl.carousel
+ *= require owl.theme
  *= require_tree .
  *= require_self
  */
@@ -31,6 +33,22 @@
 .brand img{
     margin-top: 5px
 }
+.aboutheader{
+	line-height:2em;
+	margin-bottom:0.25em;
+	text-transform:bold;
+	font-family: serif;
+	text-align: center;
+}
+.about{
+	font-family: serif;
+	font-size:1.1em;
+}
+
+.aboutheader .about {
+	font-size:0.5em;
+}
+
 @media (max-width:768px) {
     .brand img{
         margin-bottom: 5px
@@ -41,6 +59,36 @@
     .navbar .nav > li > a {
         padding: 10px 15px;
     }
+}
+
+.image {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.slided {
+  display:none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+#slided .slide-header {
+  display: none
+}
+#slided .slide-footer {
+  margin-left: auto;
+  width: 600px;
+}
+.slide-footer .previous {
+  width:75px;
+  float:left;
+  text-align:left;
+}
+.slide-footer .next {
+  width:75px;
+  float:right;
+  text-align:right;
 }
 
 @media screen and (min-width:768px){

@@ -1,17 +1,25 @@
 <header>
-	<div class="navbar-inner navbar-fixed-top navbar-default" role="navigation">
+<nav class="navbar navbar-fixed-top">
+	<div class="navbar-inner navbar-inverse" role="navigation">
 		<div class="container"> 
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				            <span class="sr-only">Toggle navigation</span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				          </button>
 				<a class="navbar-brand" href="#">WINSEDECOR</a>
 			</div>   
-			<div class="navbar-collapse collapse"> 
+			<div id="navbar" class="navbar-collapse collapse"> 
 			<ul class="nav navbar-nav nav-pills pull-right in-line">
-				<li><%= link_to "SERVICES",   '#'%></li>
-				<li><%= link_to "GALLERY",   '#'%></li>
-				<li><%= link_to "BLOG",   '#'%></li>
-				<li><%= link_to "CONTACT",   '#'%></li>	
+				<li><%= link_to "ABOUT", about_pages_path%></li>
+				<li><%= link_to "SERVICES", services_pages_path%></li>
+				<li><%= link_to "GALLERY", galleries_path%></li>
+				<li><%= link_to "CONTACT", contact_pages_path%></li>				
 			</ul>
 			</div>
 		</div>
 	</div>
+</nav>
 </header>
